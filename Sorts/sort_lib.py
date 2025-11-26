@@ -47,7 +47,7 @@ class _Bar:
         return self.height < other.height
 
 
-class _Bars:
+class _Sorter:
     """Class to manage multiple bars and sorting algorithms.
     Use the instance 'sorter' defined at the bottom.
     It should be treated as a singleton."""
@@ -126,4 +126,4 @@ class _Bars:
         return str(self._bars)
     
 
-sorter = _Bars()
+sorter = _Sorter()

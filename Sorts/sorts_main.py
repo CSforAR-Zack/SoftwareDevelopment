@@ -17,7 +17,7 @@ def main():
     root.title("Visual Sort")
     root.configure(bg=sl.COLORS["BACKGROUND"])
 
-    bars: sl._Bars = sl.sorter
+    bars: sl._Sorter = sl.sorter
     bars.setup(root, spacing, speed)
     bars.create_bars(number_of_bars, width, max_height, sl.COLORS["UNSORTED"])
 
