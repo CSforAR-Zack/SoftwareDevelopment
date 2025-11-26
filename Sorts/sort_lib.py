@@ -24,12 +24,12 @@ class _Bar:
     ) -> None:
         
         self.height = height
-        self.frame: tk.Frame = tk.Frame(wn, width=width, height=height, bg=color)
+        self._frame: tk.Frame = tk.Frame(wn, width=width, height=height, bg=color)
 
     def color(self, color: str) -> None:
         """Change the color of the bar."""
 
-        self.frame.configure(bg=color)
+        self._frame.configure(bg=color)
 
     def __repr__(self) -> str:
         """How to show a bar."""
@@ -92,13 +92,13 @@ class _Sorter:
         """Pack the bars into the window."""
 
         for bar in self._bars:
-            bar.frame.pack(side="left", anchor="s", padx=self._spacing)
+            bar._frame.pack(side="left", anchor="s", padx=self._spacing)
 
     def update_bars(self) -> None:
         """Update the bars in the window."""
 
         for bar in self._bars:
-            bar.frame.pack_forget()
+            bar._frame.pack_forget()
         self.pack_bars()
         self._wn.update()
         sleep(self._speed)
@@ -126,4 +126,4 @@ class _Sorter:
         return str(self._bars)
     
 
-sorter = _Sorter()
+sorter: _Sorter = _Sorter()
