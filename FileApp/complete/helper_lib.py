@@ -4,7 +4,6 @@ import tkinter as tk
 from tkinter import filedialog, messagebox, simpledialog
 
 
-
 COLORS: dict = {
     "BACKGROUND": "black",
     "TEXT": "white",
